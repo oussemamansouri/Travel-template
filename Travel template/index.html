@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.js"></script>
+    <script>
+
+      // Script for open calendar modal
+      function openCalendarModal() {
+        document.getElementById("calendarModal").style.display = "flex";
+    
+        const calendarEl = document.getElementById("calendar");
+        const calendar = new FullCalendar.Calendar(calendarEl, {
+          initialView: "dayGridMonth",
+          events: [
+            {
+              title: "Example Event",
+              start: "2023-08-01",
+              end: "2023-08-03"
+            }
+          ]
+        });
+    
+        calendar.render();
+          // Close modal when clicking outside of it
+        window.addEventListener("click", function(event) {
+          if (event.target === calendarModal) {
+            calendarModal.style.display = "none";
+          }
+        });
+      }
+    </script>
+  </head>
+<body>
+
+<!-- TOP START -->
+<div class="list-container">
+        <ol class="list">
+            <li class="list-item"> <a style="color: black;" href="#">AIDE</a> </li>
+            <li class="list-item"> <a style="color: black;" href="#">NOUS JONDRE</a></li>
+            <li class="list-item"> <a style="color: rgb(17, 8, 173);" href="#">ENG</a></li>
+        </ol>
+</div>
+
+<div class="list-container">
+    <ol class="list2">
+        <li class="list-item2"  ><a style="color: rgb(218, 131, 32);" href="#">ANNONCER</a> </li>
+        <li class="list-item2"> <a href="#" style="color: black;">PLANIFIER UN VOYAGE</a></li>
+        <li class="list-item2"> <a href="#" style="color: black;">MES VOYAGE</a></li>
+        <li class="list-item2" style=" margin-right: -10px; "> <a style="color: black;" href="#">CONNEXION</a></li>
+    </ol>
+</div>
+<!-- END OF TOP -->
+
+<!-- NAV START -->
+<div class="line-container">
+  <div class="form-container">
+    <form>
+      <label class="custom-select">Essayer Montréal</label>
+
+      <select class="custom-select" name="Style">
+        <option value="Style" disabled selected>Style</option>
+        <option value="Style2">style2</option>
+        <option value="Style3">style3</option>
+        <option value="Style4">style4</option>
+      </select>
+
+      <select class="custom-select" name="Langue">
+        <option value="Langue" disabled selected>Langue</option>
+        <option value="Langue2">Langue2</option>
+        <option value="Langue3">Langue3</option>
+        <option value="Langue4">Langue4</option>
+      </select>
+
+      <div class="custom-select">
+        <label>
+          Arrivée <span style="height: 20px;" class="material-symbols-outlined">trending_flat</span> Départ
+          <span class="calendar-icon material-symbols-outlined" onclick="openCalendarModal()" style="height: 20px;">calendar_month</span>
+        </label>
+      </div>
+      
+      <div class="modal" id="calendarModal">
+        <div class="modal-content">
+          <div id="calendar"></div>
+        </div>
+      </div>     
+
+      <button class="b1">RECHERCHER</button>
+    </form>
+  </div>
+  <a href="#" style="margin-top: 10px; margin-left: 20px; color: rgb(17, 8, 173);">PLUS DE FILTRES +</a>
+</div>
+<!-- END OF NAV -->
+
+<!-- HEADER START -->
+<div class="background-image-div">
+  <h1>DECOUVRIR LE MONDE PAR LES VOYAGES!</h1>
+  <button class="centered-button">INSCRIVEZ-VOUS!</button>
+</div>
+
+
+<div class="line-container2">
+  <a href="#" class="first-link">EXPERIENCES DE VOYAGE INCROYABLES</a>
+  <a href="#" class="second-link">A PROPOS</a>
+</div>
+
+
+<div class="line-container3">
+  <a href="#" class="first-link2">EXPERIENCES</a>
+  <a href="#" class="second-link2" >TEMOIGNAGES</a>
+  <a href="#" class="third-link2"><span style="border: solid black; border-radius: 20px; padding-left: 25px; padding-right: 25px; padding-top: 6px; padding-bottom: 6px;">ANNONCER</span></a>
+</div>
+<!-- END OF HEADER  -->
+
+<hr>
+<br>
+
+<!-- SECTION1 START -->
+<div class="container">
+<div class="content">
+
+  <div class="box">
+
+    <div class="card">
+        <div class="card-img5 card-smooth">
+            <div class="card-price">
+                <div class="pdp pdp1"></div>
+                <div class="price">35$</div>
+            </div>
+        </div>
+        <div class="card-text">
+          <h3>Decouvertes culinaires</h3>
+          <p class="text2">Avec julie</p>
+          <p> Venez apprendre a cuisiner tout en découvrant un appartement montréalais! </p>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-img6 card-smooth">
+            <div class="card-price">
+                <div class="pdp pdp2"></div>
+                <div class="price">5$</div>
+            </div>
+        </div>
+        <div class="card-text">
+          <h3>Hébergement + vélo</h3>
+          <p class="text2">Avec Ali</p>
+          <p> Le meilleur moyen de visiter une ville est à vélo .Laissez moi vous faire découvrir mes coins favoris </p>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-img7 card-smooth">
+            <div class="card-price">
+                <div class="pdp pdp3" ></div>
+                <div class="price"> 141$/nuit</div>
+            </div>
+        </div>
+        <div class="card-text">
+          <h3>Pêche</h3>
+          <p class="text2">Avec  Alex</p>
+          <p> Pêche sur le canal lachine entre amis.Rien de mieux pour profiter de la nature et socialiser </p>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-imgX card-smooth">
+            <div class="card-price">
+                <div class="pdp pdp4"></div>
+                <div class="price">0$</div>
+            </div>
+        </div>
+        <div class="card-text">
+          <h3>Sportifs</h3>
+          <p class="text2">Avev Florence</p>
+          <p> Participez avec nous à nos cours d'entrainnement de groupe hebdomadaire.Se mettre en forme et découvrir une nouvelle ville  </p>
+        </div>
+    </div>
+    
+</div>
+
+  <div class="box2">
+
+      <div class="card">
+          <div class="card-img1 card-smooth">
+              <div class="card-price">
+                  <div class="pdp pdp1"></div>
+                  <div class="price">35$</div>
+              </div>
+          </div>
+          <div class="card-text">
+            <h3>Amateurs de vins</h3>
+            <p class="text2">Avec julie</p>
+            <p> Venez apprendre a cuisiner tout en découvrant un appartement montréalais! </p>
+          </div>
+      </div>
+
+      <div class="card">
+          <div class="card-img2 card-smooth">
+              <div class="card-price">
+                  <div class="pdp pdp2"></div>
+                  <div class="price">5$</div>
+              </div>
+          </div>
+          <div class="card-text">
+            <h3>Meditations + Yoga</h3>
+            <p class="text2">Avec Ali</p>
+            <p> Le meilleur moyen de visiter une ville est à vélo .Laissez moi vous faire découvrir mes coins favoris </p>
+          </div>
+      </div>
+
+      <div class="card">
+          <div class="card-img3 card-smooth">
+              <div class="card-price">
+                  <div class="pdp pdp3"></div>
+                  <div class="price">30$</div>
+              </div>
+          </div>
+          <div class="card-text">
+            <h3>Plages et voile</h3>
+            <p class="text2">Avec Alex</p>
+            <p> Pêche sur le canal lachine entre amis.Rien de mieux pour profiter de la nature et socialiser </p>
+          </div>
+      </div>
+
+      <div class="card">
+          <div class="card-img4 card-smooth">
+              <div class="card-price">
+                  <div class="pdp pdp4"></div>
+                  <div class="price">0$</div>
+              </div>
+          </div>
+          <div class="card-text">
+            <h3>Entrainement Urbain</h3>
+            <p class="text2">Avec Florence</p>
+            <p> Participez avec nous à nos cours d'entrainnement de groupe hebdomadaire.Se mettre en forme et découvrir une nouvelle ville </p>
+          </div>
+      </div>
+      
+  </div>
+</div>
+</div>
+
+
+<br>
+<div class="center-container">
+  <button class="b2">TOUS LES HEBERGEMENTS</button>
+</div>
+<br><br>
+<div class="center-container">
+<span style="font-size: 30px; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"> UN VOYAGE DE REVE</span>
+</div>
+<br>
+<!-- END OF SECTION1  -->
+
+<!-- SECTION2 START -->
+<div class="container">
+  <div class="content">
+<section class="voyage">
+  <div class="voyage-card1">
+    <div class="voyage-left">
+      <div class="v-left-top">
+        <div class="v-l-t-left">
+          <div class="btn-container">
+            <div class="btn">
+              <span>Facilite d'utilisateur</span>
+              <img src="image/next.png" style="width: 13px;">
+            </div>
+          </div>          
+        </div>
+        <div class="v-l-t-right">
+          <div class="btn-container">
+            <div class="btn">
+              <span>Facilite d'utilisateur</span>
+              <img src="image/next.png" style="width: 13px;">
+            </div>
+          </div> 
+        </div>
+      </div>
+      <div class="v-left-buttom">
+        <div class="g-text">
+          <p>Authentification Sécurisée de l'hébergeur <br><span style="color: #15da15;font-weight: bold;">&</span> de ses invités</p>
+        </div>
+      </div>
+    </div>
+    <div class="voyage-right">
+      <p>LA PUBLICATION DE VOTRE HEBERGEMENTS EST</p>
+      <span>GRATUITE!</span>
+      <button>PIECE IN HEBERGEMENTS</button>
+    </div>
+  </div>
+  <div class="voyage-card2">
+    <div class="voyage-card2-left">
+      <span style="font-size: 30px;">Annoncez votre hébergement</span>
+      <span  style="font-size: 25px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">SUR LES MEILLEURS SITES</span>
+      <button style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">CLICK MAINTENANT</button>
+    </div>
+    <div class="voyage-card2-right">
+      <p>Des milliers de voyageurs cherchent quotidienneent à reserver des hebergements uniques pour rendre leurs séjours inoubliables notre présence sur internet  et les  médias sociaux nos partenariats multiples avec les agences de voyage organismes à vocations touristiques.hôteles et restaurateurs locaux ainsi que nos agents promotionnels sur le terrainn assurent que les voyageurs trouvent facilement les hébergements qui leurs sont proposés </p>
+    </div>
+  </div>
+</section>
+</div></div>
+<br><br><br><br>
+<!-- END OF SECTION2  -->
+
+<!--  SECTION3 START  -->
+<div class="container2">
+  <div class="image-container">
+    <img src="image/ima1.jpg" alt="">
+  </div>
+  <div class="content-container2">
+    <h3 class="title" style="color:rgb(89, 52, 138); ">
+      <span class="material-symbols-outlined icon" style="background-color:rgb(89, 52, 138) ;" >attach_money</span>
+      GAGNEZ UN <br> REVENU ADDITIONNEL
+    </h3>
+    <p class="par">
+      Derrière elle se cachent ses gens.Ceux qui contribuent à la rendre si unique et qui lui donne son caractère .Rendez la plus humaine plus chaleureuse et accueillante pour ceux qui la vistent en leur permettant une immension authentique avec les gens qui l'habitent!
+    </p>
+    <h3 class="title" style="color:rgb(250, 150, 68)  ;">
+      <span class="material-symbols-outlined icon" style="background-color: rgb(250, 150, 68);">forum</span>
+      FAITES DU VOYAGE <br> UNE EXPERIENCE
+    </h3>
+    <p class="par">
+      Rendez les souvenirs de veux qui voyagent plus riche en y laissant votre emprunte des fous rires ,des surprises des rencontres.Encouragez les échanges culturels  et le respect mutuels conférant ainsi au voyage un aspect profondement social.
+    </p>
+  </div>
+</div>
+
+
+<div class="container2">
+    <div class="content-container2">
+        <h3 class="title" style="color:rgb(62, 192, 138)  ;">
+            <span class="material-symbols-outlined icon" style="background-color:rgb(62, 192, 138)  ;">attach_money</span>
+            PARTAGEZ <br> VOTRE VILLE
+        </h3>
+        <p class="par">
+            Elle est LA plus belle!Vous la connaissez comme personne sous tous ses angles et toutes ses coutures .Quiconque la visitant devrait la voir comme vous La voyez partagez en A votre amour inconditionnel!Forgez les souvenirs de celui qui la visite à travers vos repères,vos coups de coeur et vos anécdotes!
+        </p>
+        <h3 class="title" style="color:#f9d90a  ;">
+            <span class="material-symbols-outlined icon" style="background-color: #f9d90a ;">forum</span>
+            HUMANISEZ <br> VOTRE VILLE
+        </h3>
+        <p class="par">
+            Derrière elle se cachent ses gens.Ceux qui contribuent à la rendre si unique et qui lui donne son caractère .Rendez la plus humaine plus chaleureuse et accueillante  pour ceux qui la vistent en leur permettant une immension authentique avec les gens qui l'habitent!
+        </p>
+        <h3 class="title" style="color:rgb(250, 150, 68)  ;">
+            </p>
+    </div>
+  <div class="image-container">
+    <img src="image/ima2.jpg" alt="">
+  </div>
+</div>
+<!--  END OF SECTION3  -->
+
+<!--  EMAILFORM START  -->
+<div class="line-container" style="background-color:#f9d90a  ;">
+  <div class="form-container">
+    <form style="background-color:#f9d90a  ;">
+    <label style="font-size: 20px; padding-right: 30px;"> <span style="color:rgb(62, 192, 138) ; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; padding-right: 3px;">Inscrivez-vous </span> pour recevoir les nouveaux hébergements</label>
+    <input type="text" placeholder=" Votre adresse courriel" style="width: 200px; height: 24px; border: none;">
+    <button class="b3" >SOUSCRIRE</button>
+  </form>
+  </div>
+</div>
+<!--  EMAILFORM START  -->
+
+
+<!-- FOOTER START -->
+<div class="footer" >
+  <div class="contain"  >
+  <div class="col">
+    <h1>Dreamin Get Away</h1>
+    <ul>
+      <li>A propos</li>
+      <li>Louer un hebergement</li>
+      <li>Voyages</li>
+      <li>Connexion</li>
+      <li>Inscription</li>
+    </ul>
+  </div>
+  <div class="col">
+    <h1>Invités / locataire</h1>
+    <ul>
+      <li>Aide</li>
+      <li>Régles</li>
+      <li>Termes d'utilisations</li>
+      <li>Confiance & sécutité</li>
+      <li>Paiement</li>
+    </ul>
+  </div>
+  <div class="col">
+    <h1>Hébergeur</h1>
+    <ul>
+      <li>Aide</li>
+      <li>Regles</li>
+      <li>Termes d'utilisations</li>
+      <li>Confiance & sécutité</li>
+      <li>Paiement</li>
+    </ul>
+  </div>
+  <div class="col">
+    <h1>Nous joindre</h1>
+    <ul>
+      <li><span style="color: rgb(62, 192, 138);" class="material-symbols-outlined">
+        call
+        </span>sans-frais 1 800 555-2834</li>
+      <li style="color: rgb(62, 192, 138);"><span  style="color: rgb(62, 192, 138);" class="material-symbols-outlined">
+        mail
+        </span>email@email.com</li>
+      <li><span style="color: rgb(62, 192, 138);" class="material-symbols-outlined">
+        pin_drop
+        </span>2092 Blvd St-Jaseph,Montréal</li>
+    </ul>
+  </div>
+  <div class="col social" style="  padding-left: 20px; width: 100%;"  >
+    <h4 style="color: white; width: 100%; padding: 40px 20px 15px 0px ;">Partagez vos voyages avec nous</h4>
+    <ul>
+      <li><svg style="padding-right: 10px ; color:rgb(62, 192, 138);" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+      </svg></li>
+      <li><svg style="padding-right: 10px; color:rgb(62, 192, 138);" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+        <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+      </svg></li>
+      <li><svg style="padding-right: 10px; color:rgb(62, 192, 138);" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+        <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+      </svg></li>
+      <li><svg style="padding-right: 10px; color:rgb(62, 192, 138);" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-pinterest" viewBox="0 0 16 16">
+        <path d="M8 0a8 8 0 0 0-2.915 15.452c-.07-.633-.134-1.606.027-2.297.146-.625.938-3.977.938-3.977s-.239-.479-.239-1.187c0-1.113.645-1.943 1.448-1.943.682 0 1.012.512 1.012 1.127 0 .686-.437 1.712-.663 2.663-.188.796.4 1.446 1.185 1.446 1.422 0 2.515-1.5 2.515-3.664 0-1.915-1.377-3.254-3.342-3.254-2.276 0-3.612 1.707-3.612 3.471 0 .688.265 1.425.595 1.826a.24.24 0 0 1 .056.23c-.061.252-.196.796-.222.907-.035.146-.116.177-.268.107-1-.465-1.624-1.926-1.624-3.1 0-2.523 1.834-4.84 5.286-4.84 2.775 0 4.932 1.977 4.932 4.62 0 2.757-1.739 4.976-4.151 4.976-.811 0-1.573-.421-1.834-.919l-.498 1.902c-.181.695-.669 1.566-.995 2.097A8 8 0 1 0 8 0z"/>
+      </svg></li>
+      <li><svg style="padding-right: 10px; color:rgb(62, 192, 138);" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-at" viewBox="0 0 16 16">
+        <path d="M13.106 7.222c0-2.967-2.249-5.032-5.482-5.032-3.35 0-5.646 2.318-5.646 5.702 0 3.493 2.235 5.708 5.762 5.708.862 0 1.689-.123 2.304-.335v-.862c-.43.199-1.354.328-2.29.328-2.926 0-4.813-1.88-4.813-4.798 0-2.844 1.921-4.881 4.594-4.881 2.735 0 4.608 1.688 4.608 4.156 0 1.682-.554 2.769-1.416 2.769-.492 0-.772-.28-.772-.76V5.206H8.923v.834h-.11c-.266-.595-.881-.964-1.6-.964-1.4 0-2.378 1.162-2.378 2.823 0 1.737.957 2.906 2.379 2.906.8 0 1.415-.39 1.709-1.087h.11c.081.67.703 1.148 1.503 1.148 1.572 0 2.57-1.415 2.57-3.643zm-7.177.704c0-1.197.54-1.907 1.456-1.907.93 0 1.524.738 1.524 1.907S8.308 9.84 7.371 9.84c-.895 0-1.442-.725-1.442-1.914z"/>
+      </svg></li>
+      <li><svg style="padding-right: 10px; color:rgb(62, 192, 138);" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+      </svg></li>
+    </ul>
+  </div>
+</div>
+<div class="clearfix ">
+  Tous droits réservés 2018
+</div>
+<!-- END OF FOOTER -->
+
+</body>
+
+</html>

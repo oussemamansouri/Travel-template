@@ -1,0 +1,851 @@
+
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* STYLES SPECIFIC TO TOP  */
+    .list-container {
+      text-align: right;
+      padding: 10px;
+    }
+  
+    .list {
+      display: inline-block;
+      padding-left: 0;
+      list-style: none;
+      margin: 0;
+      padding-inline-start: 0;
+      font-size: 0; /* Set font-size to 0 to remove space between inline-block elements */
+    }
+  
+    .list-item {
+      display: inline;
+      margin-right: 0; /* Set margin-right to 0 */
+      padding: 5px 10px;
+      font-size: 16px; /* Set desired font-size for list items */
+    }
+  
+    .list-item:nth-child(1),
+    .list-item:nth-child(2) {
+      background-color: yellow;
+    }
+  
+    .list-item:nth-child(3) {
+      background-color: rgb(18, 205, 114);
+      color: rgb(17, 8, 173);
+    }
+
+
+    .list2 {
+    display: inline-block;
+    padding-left: 0;
+    list-style: none;
+    margin: 0;
+    padding-inline-start: 0;
+  }
+
+  .list-item2 {
+    display: inline;
+    margin-right: 18px; /* Adjust margin for spacing between words */
+    padding: 5px 10px; /* Apply padding to the list items */
+    border-radius: 5px;
+    font-size: large;
+  }
+  
+    @media screen and (max-width: 600px) {
+      .list-container {
+        text-align: right;
+      }
+    }
+/* END OF TOP STYLE  */
+
+
+
+
+/* STYLES SPECIFIC TO NAV  */
+    label {
+    display: flex;
+    align-items: center;
+  }
+
+  .material-symbols-outlined {
+    margin: 0 5px;
+    vertical-align: middle;
+  }
+
+  /* Style for the container */
+  .line-container {
+    background-color: rgb(223, 223, 223);
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  /* Style for the form */
+  .form-container {
+    display: flex;
+    align-items: center;
+    background-color: white;
+  }
+
+  /* Style for the form elements */
+  form {
+    display: flex;
+    align-items: center;
+    margin: 0; /* Remove default margin */
+  }
+
+  /* Style for the select elements */
+  select {
+    margin: 0 10px 0 0; /* Adjust margin to remove space */
+  }
+
+  /* Style for the modal */
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Style for the calendar */
+  #calendar {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  /* Style for the custom select */
+  .calendar-icon {
+    cursor: pointer;
+    margin-left: 10px;
+  }
+
+  .custom-select {
+    display: inline-block;
+    width: 170px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    background-color: #f4f4f4;
+    margin: 0; /* Remove default margin */
+  }
+
+  .b1 {
+    width: 170px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    background-color: rgb(18, 205, 114);
+    color: white;
+  }
+
+/* Media query for responsiveness */
+@media screen and (max-width: 768px) {
+  .form-container {
+    flex-direction: column; /* Stack form elements vertically on smaller screens */
+    align-items: center;
+  }
+  .custom-select,
+  .b1 {
+    width: 100%; /* Make custom select elements and button take full width */
+  }
+
+  select {
+    margin: 10px 0; /* Add vertical spacing */
+  }
+}
+/* END OF NAV STYLE  */
+
+/* STYLES SPECIFIC TO HEADER  */
+.background-image-div {
+  background-image: url('image/see.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh; /* Adjust the height as needed */
+}
+
+.centered-button {
+  margin-top: 10px; /* Add spacing between title and button */
+  width: 170px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border: 1px solid rgb(18, 205, 114);
+    border-radius: 20px;
+    background-color: rgb(18, 205, 114);
+    color: white;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+h1{
+  font-family: 'Courier New', Courier, monospace;
+  color: white;
+}
+
+
+.line-container2 {
+  display: flex;
+  width: 100%;
+  height: 30px;
+  
+}
+
+.first-link,
+.second-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 0;
+  flex-grow: 1; /* Distribute available space equally on smaller screens */
+}
+
+.first-link {
+  background-color: #ffd746f0;
+  flex: 65%;
+}
+
+.second-link {
+  background-color: #ffc800;
+  flex: 35%;
+  width: 35%;
+  text-decoration: underline;
+}
+
+/* Media query for responsiveness */
+@media screen and (max-width: 768px) {
+  .first-link,
+  .second-link {
+    flex-basis: 100%; /* Make each link take full width on smaller screens */
+    width: 100%;
+    padding: 15px 0; /* Increase padding for better touch interaction */
+  }
+}
+
+
+.line-container3 {
+  display: flex;
+  width: 100%;
+}
+
+
+.first-link2,
+.second-link2,
+.third-link2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 0;
+  flex-grow: 1;
+}
+
+.first-link2,
+.second-link2 {
+  background-color: #fffffff0;
+  flex-basis: 20%;
+  padding-left: 30px;
+}
+
+.first-link2{
+ margin-left: 100px;
+}
+.second-link2{
+ margin-left:-130px ; 
+}
+
+.third-link2 {
+  background-color: #ffffff;
+  flex-basis: 40%;
+
+}
+
+/* Media query for responsiveness */
+@media screen and (max-width: 768px) {
+  .first-link2,
+  .second-link2,
+  .third-link2 {
+    flex-basis: 100%; /* Make each link take full width on smaller screens */
+    width: 100%;
+    padding: 15px 0; /* Increase padding for better touch interaction */
+  }
+}
+/* END OF HEADER STYLE  */
+
+
+
+
+
+/* STYLES SPECIFIC TO SECTION1  */
+.container {
+    width: 70%;
+  margin: 0 15%; /* Adjust margin instead of padding */
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+}
+
+.content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.box,
+.box2 {
+    display: flex;
+    gap: 10px; 
+    margin-top: 30px;
+    height: 400px;
+
+}
+
+.card {
+    /* width: 280px; */
+    width: 100%; /* Adjust card width */
+    height: 100%;
+    position: relative;
+}
+
+.card-img1,
+.card-img2,
+.card-img3,
+.card-img4,
+.card-img5,
+.card-img6,
+.card-img7,
+.card-imgX {
+    width: 100%;
+    height: 60%;
+    background-size: cover;
+}
+
+.card-img1 {
+    background-image: url(image/act1.jpg);
+}
+
+.card-img2 {
+    background-image: url(image/act2.jpg);
+}
+
+.card-img3 {
+    background-image: url(image/act3.jpg);
+}
+
+.card-img4 {
+    background-image: url(image/act4.webp);
+}
+.card-img5 {
+    background-image: url(image/act5.webp);
+}
+.card-img6 {
+    background-image: url(image/act6.jpg);
+}
+.card-img7 {
+    background-image: url(image/act7.avif);
+}
+
+.card-imgX {
+    background-image: url(image/act8.jpg);
+}
+
+
+.card-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2%;
+    margin-top: 10%;
+}
+
+.card-text h3 {
+    font-weight: bold;
+    padding: 5% 0;
+}
+
+.card-text p {
+    font-size: 15px;
+    align-self: center;
+}
+
+.card-text .text2 {
+    color: #15da15;
+    font-weight: bold;
+}
+
+.card-price {
+    position: absolute;
+    bottom: -10%;
+    display: flex;
+}
+
+.card-smooth {
+    position: relative;
+    display: flex;
+}
+
+.pdp {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    border: solid 1px #ffffff;
+    padding: 5px 7px;
+    margin: 5px 5px;
+    color: #fff;
+}
+
+.pdp1{
+  background: url(image/1.png) 50% 50%/contain; 
+}
+.pdp2{
+  background: url(image/2.png) 50% 50%/contain;
+}
+.pdp3{
+  background: url(image/3.png) 50% 50%/contain;
+}
+.pdp4{
+  background: url(image/4.png) 50% 50%/contain;
+}
+
+
+.price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #f9e7fe;
+}
+
+.b2 {
+    width: 250px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 2px solid #000000;
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+  }
+  .b2:hover{
+  
+  transition: 0.5s;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+  }
+
+  .center-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 100%; /* Set the height of the container div */
+}
+
+/* Media query for screens smaller than 768px */
+@media (max-width: 768px) {
+  .center-container {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    text-align: center;
+  }
+}
+/* ENF OF SECTION1 STYLE */
+
+
+
+
+/* STYLES SPECIFIC TO SECTION2  */
+  .voyage {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; 
+    gap: 20px;
+  }
+  
+  .voyage-card1 {
+    height: 70%;
+    width: 100%;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .voyage-right {
+    width: 50%;
+    height: 100%;
+    position: relative; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url("image/friends-happy-190821.jpg");
+    background-size: cover;
+    text-align: center;
+  }
+  .voyage-right::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(9, 204, 198, 0.566); 
+    z-index: 1; 
+  }
+  .voyage-right p, .voyage-card2-left p{
+    padding: 0 15% 0 15%;
+    font-size: 30px;
+    color: #fff;
+    z-index: 5;
+  }
+  .voyage-right span, .voyage-card2-left span{
+    font-size: 40px;
+    font-weight: bold;
+    color: #fff;
+    z-index: 5;
+  }
+  .voyage-right button{
+    margin-top: 5px;
+    background-color: #ffc800;
+    width: 50%;
+    height: 30px;
+    border: none;
+    border-radius: 12px;
+    z-index: 5;
+  }
+  
+  .voyage-left {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .v-left-top {
+    height: 50%;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .v-l-t-left {
+    width: 50%;
+    background-image: url("image/friend.jpg");
+    background-size: cover;
+    display: flex; 
+    flex-direction: column; 
+  }
+  
+  .btn-container {
+    flex: 1; 
+    display: flex;
+    align-items: flex-end; 
+  }
+  
+  .v-l-t-left .btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    width: 100%;
+    background-color: rgb(246, 129, 87);
+    padding: 10px; 
+    cursor: pointer;
+  }
+  
+  .btn img {
+    margin-left: 10px; 
+  }
+  .v-l-t-right {
+    width: 50%;
+    background-image: url("image/women.jpg");
+    background-size: cover;
+    display: flex; 
+    flex-direction: column; 
+  }
+  .v-l-t-right .btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    width: 100%;
+    background-color: rgba(9, 204, 139, 0.823);
+    padding: 10px; 
+    cursor: pointer;
+  }
+  
+  .v-left-buttom{
+    height: 50%;
+    background-image: url("image/card.jpg");
+    background-size: cover;
+  }
+  .v-left-buttom .g-text{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    text-align: left;
+  }
+  .v-left-buttom p{
+    font-size: 35px;
+    color: #424242;
+  }
+  .voyage-card2 {
+    height: 30%;
+    width: 100%;
+    display: flex;
+  }
+  .voyage-card2-left{
+    height: 100%;
+    width: 45%;
+    background-color: rgb(78, 5, 146);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  .voyage-card2-left button{
+    margin-top: 5px;
+    background-color: #ffffff;
+    color: blueviolet;
+    width: 50%;
+    height: 30px;
+    border: none;
+    border-radius: 12px;
+    z-index: 5;
+
+  }
+  .voyage-card2-right{
+    height: 100%;
+    width: 55%;
+    position: relative;
+    background-image: url("image/celebrate.jpg");
+    background-size: cover;
+    padding: 20px 20px 0 20px ;
+    box-sizing: border-box;
+  }
+  .voyage-card2-right::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(90, 11, 163, 0.5);
+    z-index: 1; 
+  }
+  .voyage-card2-right p{
+    font-size: 15px;
+    color: #ffffff;
+    position: relative;
+    z-index: 2; 
+  
+  }
+/* END OF SECTION2 STYLE */
+
+/* STYLES SPECIFIC TO SECTION3  */
+.container2 {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  .image-container {
+    flex: 1;
+    width: 40%; /* Adjust width for the image */
+  }
+
+  .image-container img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .content-container2 {
+    flex: 1;
+    width: 60%; /* Adjust width for the content */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .title {
+    font-size: 28px; /* Increase font size */
+    margin-bottom: 10px;
+    padding-left:70px; /* Adjust padding */
+    padding-right: 70px; /* Adjust padding */
+    display: flex;
+    align-items: center;
+  }
+
+  .par {
+    font-size: 18px; /* Increase font size */
+    line-height: 1.5;
+    margin-bottom: 15px;
+    padding-left: 70px; /* Adjust padding */
+    padding-right: 70px; /* Adjust padding */
+  }
+
+  .icon {
+    font-size: 36px; /* Increase icon size */
+    padding: 10px; /* Add padding to the icon */
+    border-radius: 50%; /* Make the icon circular */
+    margin-right: 15px; /* Add space between icon and title */
+    color: white;
+  }
+/* STYLES SPECIFIC TO SECTION3  */
+
+.b3{
+    width: 110px;
+   height: 26px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    background-color: rgb(18, 205, 114);
+    color: white;
+  }
+
+
+/* STYLES SPECIFIC TO FOOTER  */
+.footer {
+  width: 100%;
+  position: relative;
+  height: auto;
+  background-color: #46258e;
+  text-align: center; /* Center-align the columns */
+}
+
+.footer .col-container {
+  display: inline-block;
+  text-align: left; /* Reset text alignment for columns */
+}
+
+.footer .col {
+  text-align: left;
+  display: inline-block; /* Display columns inline */
+  width: 290px;
+  height: auto;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  padding: 0px 10px; /* Adjust padding for equal spacing */
+  vertical-align: top; /* Align columns to the top */
+}
+
+.footer .col h1 {
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 17px;
+  padding: 70px 0px 30px 0px;
+  color: rgb(255, 255, 255);
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.250em;
+}
+
+.footer .col ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer .col ul li {
+  color: #ffffff;
+  font-size: 12px;
+  font-family: inherit;
+  padding: 5px 0px;
+  cursor: pointer;
+  transition: .2s;
+  -webkit-transition: .2s;
+  -moz-transition: .2s;
+}
+
+.social ul li {
+  display: inline-block;
+  padding-right: 5px !important;
+}
+
+
+.clearfix {
+  color: white;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: #391a7b;
+  text-align: left; /* Add this line to align text to the left */
+  padding-left: 145px;
+}
+
+
+@media only screen and (min-width: 1280px) {
+  .contain {
+    width: 1200px;
+    margin: 0 auto;
+  }
+}
+@media only screen and (max-width: 1139px) {
+  .contain .social {
+    width: 1000px;
+    display: block;
+  }
+  .social h1 {
+    margin: 0px;
+  }
+}
+@media only screen and (max-width: 950px) {
+  .footer .col {
+    width: 33%;
+  }
+  .footer .col h1 {
+    font-size: 14px;
+  }
+  .footer .col ul li {
+    font-size: 13px;
+  }
+}
+@media only screen and (max-width: 500px) {
+    .footer .col {
+      width: 50%;
+    }
+    .footer .col h1 {
+      font-size: 14px;
+    }
+    .footer .col ul li {
+      font-size: 13px;
+    }
+}
+@media only screen and (max-width: 340px) {
+  .footer .col {
+    width: 100%;
+  }
+}
+ /* END OF FOOTER STYLE */
+
+
