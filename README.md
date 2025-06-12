@@ -1,6 +1,10 @@
-# Travel-template
- I created a travel template using HTML, CSS and JavaScript. 
- This static template elegantly presents destinations with attractive images and a neat layout. 
- Details are highlighted by thoughtful color and font choices, giving users an inspiring vision for their future adventures. 
- My work embodies functional simplicity while capturing the essence of discovery and exploration.
-#### responsive: NO, for the responsive version you can contact me
+# Travel Template
+
+**Travel Template** is a static website built using **HTML**, **CSS**, and **JavaScript**, designed to showcase travel destinations with elegance and visual appeal.
+
+This template features a clean and organized layout, enhanced with vibrant images, thoughtful color schemes, and well-chosen fonts—offering users an inspiring glimpse into potential adventures.
+
+The design focuses on **functional simplicity** while capturing the spirit of **discovery** and **exploration**.
+
+> **Responsive:** ❌ Not responsive by default.  
+> For a responsive version, feel free to contact me.
